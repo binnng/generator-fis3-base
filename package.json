@@ -1,6 +1,6 @@
 {
   "name": "generator-fis3-base",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Base Yeoman Generator Of FIS3",
   "license": "MIT",
   "repository": "binnng/generator-fis3-base",
