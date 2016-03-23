@@ -1,0 +1,11 @@
+{
+  "name": "the-name",
+  "scripts": {
+    "serve": "fis3 release -wL",
+    "dist": "rm -rf dist && fis3 release dist -d dist"
+  },
+  "dependencies": {
+    "ip": "^1.1.2",
+    "opn": "^4.0.1"
+  }
+}

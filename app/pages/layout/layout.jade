@@ -1,0 +1,27 @@
+mixin script_inline(src)
+  script(src="#{src}?__inline")
+
+mixin link_inline(href)
+  link(type="text/css",rel="stylesheet", href="#{href}?__inline")
+
+doctype html
+html(lang="zh")
+  block setup
+  head
+    meta(http-equiv='content-type', content='text/html;charset=utf-8')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    block title
+      title= title
+    +link_inline("../../styles/reset.less")
+    +link_inline("../../styles/global.less")
+    +link_inline("../../styles/media.less")
+    block style
+  body
+    #root
+      include ./header.jade
+      #boot
+        #container
+          block body
+      include ./footer.jade
+    +script_inline("../../scripts/global.es6")
+    block script
